@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css', integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC', crossorigin='anonymous')
+        link(rel="stylesheet", href="/css/style.css")
+        title Manage Courses
+    body 
+        include ./includes/header
+        .container.mt-4 
+            h1 Manage Courses
+            table.table.mt-4
+                thead
+                    tr
+                    th(scope="col") STT
+                    th(scope="col") Name
+                    th(scope="col") Description
+                    th(scope="col") Img
+                    th(scope="col")
+                tbody
+                    each course, idx in courses
+                        tr
+                            th(scope="row")= idx + 1 
+                            td= course.name
+                            td= course.description
+                            td
+                                img.img_update(src=`/img/cover/${course.cover}`)
+                            td
+                                a.btn.btn-link(href=`/courses/${course.id}/edit`) Update
+                                a.btn.btn-link(href=`/courses/delete/${course.id}`) Delete
+                               
+
+        include ./includes/footer
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM', crossorigin='anonymous')
+
+
+
+        

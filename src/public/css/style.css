@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #1db3ce;
+    color: black !important;
+}
+
+.nav-link {
+    color: black;
+}
+
+.card-img-top {
+    height: 200px;
+}
+
+.img_update {
+    width: 30%;
+    height: 100px;
+    object-fit: contain;
+}
+
+.modal-dialog {
+    background-color: white;
+}
+
+.left {
+    margin-left: 15px;
+}
+
+.footer {
+    background-color: #1db3ce;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.content {
+    font-size: 16px;
+    color: white;
+}
